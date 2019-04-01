@@ -13,21 +13,50 @@
                 
                 <h1>Heading</h1>
 
-                <div id="timer"><h2>Time Left: 0</h2></div>
+                <!--Start Button, First Screen-->
 
-                <div id="questions">
+                <button id='startBtn'>Start</button> <br>
+
+                <!--Questions, Second Page-->
+
+                <div id="timer">Time Left: 0</div>
+
+                <div id="questions" class="hide">
                     <h3>Question One</h3>
-                    <input type="radio" name="answer" value="option1"> Option One
-                    <input type="radio" name="answer" value="option1"> Option Two
-                    <input type="radio" name="answer" value="option1"> Option Three <br>
+                    <form>
+                        <input type="radio" name="answer" value="option1"> Option One
+                        <input data-type="correct" type="radio" name="answer" value="option1"> Correct Option
+                        <input type="radio" name="answer" value="option1"> Option Three <br>
+                    </form>
 
                     <h3>Question Two</h3>
-                    <input type="radio" name="answer" value="option1"> Option One
-                    <input type="radio" name="answer" value="option1"> Option Two
-                    <input type="radio" name="answer" value="option1"> Option Three <br>
+                    <form>
+                        <input type="radio" name="answer" value="option1"> Option One
+                        <input type="radio" name="answer" value="option1"> Option Two
+                        <input data-type="correct" type="radio" name="answer" value="option1"> Correct Option <br>
+                    </form>
+
+                    <h3>Question Three</h3>
+                    <form>
+                        <input data-type="correct" type="radio" name="answer" value="option1"> Correct Option
+                        <input type="radio" name="answer" value="option1"> Option Two
+                        <input type="radio" name="answer" value="option1"> Option Three <br>
+                    </form>
+
+                    <h3>Question Four</h3>
+                    <form>
+                        <input type="radio" name="answer" value="option1"> Option One
+                        <input type="radio" name="answer" value="option1"> Option Two
+                        <input data-type="correct" type="radio" name="answer" value="option1"> Correct Option <br>
+                    </form>
+                
+                <br><input id="submit" type="submit" value="Submit">
+
                 </div> <!--Questions div-->
 
-                <div id="submit"><input type="submit" value="Submit"></div>
+                <!--Score Screen, Third Page-->
+                <p id="score">You got 0/5 correct!</p>
+
             </div> <!--Content div-->
         </div> <!--Container div-->
     </body>
