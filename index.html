@@ -19,13 +19,13 @@
 
                 <!--Questions, Second Page-->
 
-                <div id="timer">Time Left: 0</div>
+                <div id="timer">Time Left: 0 seconds</div>
 
                 <div id="questions" class="hide">
                     <h3>Question One</h3>
                     <form>
                         <input type="radio" name="answer" value="option1"> Option One
-                        <input data-type="correct" type="radio" name="answer" value="option1"> Correct Option
+                        <input id="correct" type="radio" name="answer" value="option1"> Correct Option
                         <input type="radio" name="answer" value="option1"> Option Three <br>
                     </form>
 
@@ -33,12 +33,12 @@
                     <form>
                         <input type="radio" name="answer" value="option1"> Option One
                         <input type="radio" name="answer" value="option1"> Option Two
-                        <input data-type="correct" type="radio" name="answer" value="option1"> Correct Option <br>
+                        <input id="correct" type="radio" name="answer" value="option1"> Correct Option <br>
                     </form>
 
                     <h3>Question Three</h3>
                     <form>
-                        <input data-type="correct" type="radio" name="answer" value="option1"> Correct Option
+                        <input id="correct" type="radio" name="answer" value="option1"> Correct Option
                         <input type="radio" name="answer" value="option1"> Option Two
                         <input type="radio" name="answer" value="option1"> Option Three <br>
                     </form>
@@ -47,7 +47,7 @@
                     <form>
                         <input type="radio" name="answer" value="option1"> Option One
                         <input type="radio" name="answer" value="option1"> Option Two
-                        <input data-type="correct" type="radio" name="answer" value="option1"> Correct Option <br>
+                        <input id="correct" type="radio" name="answer" value="option1"> Correct Option <br>
                     </form>
                 
                 <br><input id="submit" type="submit" value="Submit">
@@ -55,7 +55,7 @@
                 </div> <!--Questions div-->
 
                 <!--Score Screen, Third Page-->
-                <p id="score">You got 0/5 correct!</p>
+                <p id="score" class="hide">Game Over! <br> You got 0/5 correct!</p>
 
             </div> <!--Content div-->
         </div> <!--Container div-->
