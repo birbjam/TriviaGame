@@ -1,9 +1,6 @@
 
-// Declaring global variables.
-var score = 0;
-var correctAnswer = 0;
-var incorrectAnswer = 0;
-
+//Global variable for score.
+var amountCorrect = 0;
 
 // Waits for the start button to be pressed.
     document.getElementById("startBtn").addEventListener("click", startGame);
@@ -19,8 +16,10 @@ var incorrectAnswer = 0;
 //When times gets down to zero, it stops and says "Finished!"
             if (timeleft <= 0) {
                 clearInterval(timer);
-                document.getElementById("timer").innerHTML = "Finished!"
-            }
+                document.getElementById("timer").innerHTML = "Finished!";
+                //End game function is called.
+                endGame();
+            };
         }, 1000);
 
     };
@@ -35,25 +34,21 @@ var incorrectAnswer = 0;
         setTimeout(function () { document.getElementById("questions").className = "hide"; }, 1000);
         //Shows the score.
         setTimeout(function () { document.getElementById("score").className="show"; }, 1000);
-        document.getElementById("score").innerHTML("Game Over!\nYou got " + score + "/5 correct!");
+        document.getElementById("score").innerText = "Game Over! You got " + amountCorrect + "/5 correct!";
     };
 
 
+function handleClick() {
 
-
-// Testing a random timeout function.
-//    setTimeout(function () {
-//      alert("Done"); }, 30000);
-
-// Trying to select everything with the class 'radio'.
-//let answers = document.querySelectorAll('radio');
-
-//Loop that looks for a certain data type.
-//for (let answer of answers) {
-    //answer.addEventListener('click', function() {
-        //var correct = this.dataset.type
-    //}
-//)};
-
-
-//document.getElementById("#timer").innerHTML("Time Left: " + time + "seconds");
+//Loops through all the radio groups.
+for (var i = 1; i <= 45; i++) {
+    var radios = document.getElementsByName("group" + i);
+    for (var j = 0; j < radios.length; j++) {
+        var radio = radios[j];
+        //If correct radio button was selected, adds to the score counter.
+        if (radio.value === "correct" && radio.checked) {
+            amountCorrect++;
+        }
+    }
+}
+};

@@ -24,33 +24,33 @@
                 <div id="questions" class="hide">
                     <h3>Question One</h3>
                     <form>
-                        <input type="radio" name="answer" value="option1"> Option One
-                        <input id="correct" type="radio" name="answer" value="option1"> Correct Option
-                        <input type="radio" name="answer" value="option1"> Option Three <br>
+                        <input id="answer" type="radio" name="group1" value="wrong"> Option One
+                        <input id="answer" type="radio" name="group1" value="correct"> Correct Option
+                        <input id="answer" type="radio" name="group1" value="wrong"> Option Three <br>
                     </form>
 
                     <h3>Question Two</h3>
                     <form>
-                        <input type="radio" name="answer" value="option1"> Option One
-                        <input type="radio" name="answer" value="option1"> Option Two
-                        <input id="correct" type="radio" name="answer" value="option1"> Correct Option <br>
+                        <input id="answer" type="radio" name="group2" value="wrong"> Option One
+                        <input id="answer" type="radio" name="group2" value="wrong"> Option Two
+                        <input id="answer" type="radio" name="group2" value="correct"> Correct Option <br>
                     </form>
 
                     <h3>Question Three</h3>
                     <form>
-                        <input id="correct" type="radio" name="answer" value="option1"> Correct Option
-                        <input type="radio" name="answer" value="option1"> Option Two
-                        <input type="radio" name="answer" value="option1"> Option Three <br>
+                        <input id="answer" type="radio" name="group3" value="correct"> Correct Option
+                        <input id="answer" type="radio" name="group3" value="wrong"> Option Two
+                        <input id="answer" type="radio" name="group3" value="wrong"> Option Three <br>
                     </form>
 
                     <h3>Question Four</h3>
                     <form>
-                        <input type="radio" name="answer" value="option1"> Option One
-                        <input type="radio" name="answer" value="option1"> Option Two
-                        <input id="correct" type="radio" name="answer" value="option1"> Correct Option <br>
+                        <input id="answer" type="radio" name="group4" value="wrong"> Option One
+                        <input id="answer" type="radio" name="group4" value="wrong"> Option Two
+                        <input id="answer" type="radio" name="group4" value="correct"> Correct Option <br>
                     </form>
                 
-                <br><input id="submit" type="submit" value="Submit">
+                <br><input id="submit" type="submit" onclick="return handleClick();" value="Submit">
 
                 </div> <!--Questions div-->
 
