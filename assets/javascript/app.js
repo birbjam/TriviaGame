@@ -3,14 +3,25 @@
 var score = 0;
 var correctAnswer = 0;
 var incorrectAnswer = 0;
-var time = 30;
+
+
 
 
 // Waits for the start button to be pressed.
     document.getElementById("startBtn").addEventListener("click", startGame);
-//When the start button is pressed, the div containing the questions appears in one second.
+//When the start button is pressed, the div containing the questions appears in one second and the timer starts countdown.
     function startGame() {
         setTimeout(function () { document.getElementById("questions").className="show"; }, 1000);
+//Creates variable for how many seconds to start out with.
+        var timeleft = 10;
+        var timer = setInterval(function () {
+            document.getElementById("timer").innerHTML = "Time: " + timeleft + " seconds remaining";
+            timeleft -= 1;
+            if (timeleft <= 0) {
+                clearInterval(timer);
+                document.getElementById("timer").innerHTML = "Finished!"
+            }
+        }, 1000);
 
     };
 
