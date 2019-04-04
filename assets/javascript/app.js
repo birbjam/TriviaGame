@@ -3,22 +3,16 @@
 var score = 0;
 var correctAnswer = 0;
 var incorrectAnswer = 0;
+var time = 30;
 
-//Second attempt at timer, needs HTML modification
-function countDown(secs, elem) {
-    var element = document.getElementById(elem);
-    element.innerHTML = "Time Left: " + secs + "seconds";
-
-    secs--;
-}
 
 // Waits for the start button to be pressed.
     document.getElementById("startBtn").addEventListener("click", startGame);
 //When the start button is pressed, the div containing the questions appears in one second.
     function startGame() {
         setTimeout(function () { document.getElementById("questions").className="show"; }, 1000);
-    };
 
+    };
 
 
 //Listens for a click on the submit button.
