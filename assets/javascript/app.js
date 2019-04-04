@@ -5,8 +5,6 @@ var correctAnswer = 0;
 var incorrectAnswer = 0;
 
 
-
-
 // Waits for the start button to be pressed.
     document.getElementById("startBtn").addEventListener("click", startGame);
 //When the start button is pressed, the div containing the questions appears in one second and the timer starts countdown.
@@ -16,7 +14,9 @@ var incorrectAnswer = 0;
         var timeleft = 10;
         var timer = setInterval(function () {
             document.getElementById("timer").innerHTML = "Time: " + timeleft + " seconds remaining";
+//Decrements time by one.
             timeleft -= 1;
+//When times gets down to zero, it stops and says "Finished!"
             if (timeleft <= 0) {
                 clearInterval(timer);
                 document.getElementById("timer").innerHTML = "Finished!"
@@ -29,8 +29,11 @@ var incorrectAnswer = 0;
 //Listens for a click on the submit button.
     document.getElementById("submit").addEventListener("click", endGame);
 
-//Shows the score screen after one second of clicking submit and displays the score.
+//The end Game function.
     function endGame() {
+        //Hides the questions after the user presses Enter.
+        setTimeout(function () { document.getElementById("questions").className = "hide"; }, 1000);
+        //Shows the score.
         setTimeout(function () { document.getElementById("score").className="show"; }, 1000);
         document.getElementById("score").innerHTML("Game Over!\nYou got " + score + "/5 correct!");
     };
