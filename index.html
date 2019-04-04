@@ -17,45 +17,52 @@
 
                 <button id='startBtn'>Start</button> <br>
 
-                <!--Questions, Second Page-->
+                <!--Questions, Second Screen-->
 
-                <div id="timer">Time:</div>
 
                 <div id="questions" class="hide">
-                    <h3>Question One</h3>
+                    <h2 id="timer">Time:</h2>
+                    <h3>1. What planet is closest in size to our moon?</h3>
                     <form>
-                        <input id="answer" type="radio" name="group1" value="wrong"> Option One
-                        <input id="answer" type="radio" name="group1" value="correct"> Correct Option
-                        <input id="answer" type="radio" name="group1" value="wrong"> Option Three <br>
+                        <input id="answer" type="radio" name="group1" value="wrong"> Venus
+                        <input id="answer" type="radio" name="group1" value="correct"> Mercury
+                        <input id="answer" type="radio" name="group1" value="wrong"> Mars <br>
                     </form>
 
-                    <h3>Question Two</h3>
+                    <h3>2. What's short for "binary digit"?</h3>
                     <form>
-                        <input id="answer" type="radio" name="group2" value="wrong"> Option One
-                        <input id="answer" type="radio" name="group2" value="wrong"> Option Two
-                        <input id="answer" type="radio" name="group2" value="correct"> Correct Option <br>
+                        <input id="answer" type="radio" name="group2" value="wrong"> Byte
+                        <input id="answer" type="radio" name="group2" value="wrong"> Bite
+                        <input id="answer" type="radio" name="group2" value="correct"> Bit <br>
                     </form>
 
-                    <h3>Question Three</h3>
+                    <h3>3. What is someone who shoes horses called?</h3>
                     <form>
-                        <input id="answer" type="radio" name="group3" value="correct"> Correct Option
-                        <input id="answer" type="radio" name="group3" value="wrong"> Option Two
-                        <input id="answer" type="radio" name="group3" value="wrong"> Option Three <br>
+                        <input id="answer" type="radio" name="group3" value="correct"> A farrier
+                        <input id="answer" type="radio" name="group3" value="wrong"> A horse shoer
+                        <input id="answer" type="radio" name="group3" value="wrong"> A herpatologist <br>
                     </form>
 
-                    <h3>Question Four</h3>
+                    <h3>4. What color is a Himalayan poppy?</h3>
                     <form>
-                        <input id="answer" type="radio" name="group4" value="wrong"> Option One
-                        <input id="answer" type="radio" name="group4" value="wrong"> Option Two
-                        <input id="answer" type="radio" name="group4" value="correct"> Correct Option <br>
+                        <input id="answer" type="radio" name="group4" value="wrong"> Yellow
+                        <input id="answer" type="radio" name="group4" value="wrong"> Red
+                        <input id="answer" type="radio" name="group4" value="correct"> Blue <br>
+                    </form>
+
+                    <h3>5. How many valves does a trumpet have?</h3>
+                    <form>
+                        <input id="answer" type="radio" name="group4" value="correct"> Four
+                        <input id="answer" type="radio" name="group4" value="wrong"> Five
+                        <input id="answer" type="radio" name="group4" value="wrong"> Six <br>
                     </form>
                 
                 <br><input id="submit" type="submit" onclick="return handleClick();" value="Submit">
 
                 </div> <!--Questions div-->
 
-                <!--Score Screen, Third Page-->
-                <p id="score" class="hide">Game Over! <br> You got 0/5 correct!</p>
+                <!--Score Screen, Third Screen-->
+                <h2 id="score" class="hide">Game Over! <br> You got 0/5 correct!</h2>
 
             </div> <!--Content div-->
         </div> <!--Container div-->
